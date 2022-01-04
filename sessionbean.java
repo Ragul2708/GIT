@@ -23,6 +23,7 @@ public class SimpleWordCounter {
             }
             
             // show results (Dhanush)
+// show results (Dhanush)
             for(String word : wordCount.keySet())
                 System.out.println(word + " " + wordCount.get(word));
             System.out.println(wordCount.size());

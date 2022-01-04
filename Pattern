@@ -1,0 +1,35 @@
+#include<bits/stdc++.h>
+using namespace std ;
+
+int main()
+{
+    string s ;
+    cin >> s ;
+   
+    int len = s.length() ;
+   
+    int ch , k ;
+   
+    for(int row = 1 ; row <= len ; row++)
+    {
+        for(int space = row ; space < len ; space++)
+            cout << "  " ;
+           
+        for(ch = len/2 , k = 1 ; k < row ; k++, ch++)
+        {
+            if(k == len/2+1)
+                break ;
+            cout << s[ch] << '#' ;
+        }
+       
+        cout << s[ch] ;
+       
+        if(row > len/2+1)
+        {
+            for(ch = 0 , k = (len/2)+1 ; k < row ; k++, ch++)
+                cout << '@' << s[ch] ;
+        }
+        cout << endl ;
+    }
+    return 0 ;
+}
